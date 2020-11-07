@@ -1,0 +1,64 @@
+\documentclass[11pt]{article}
+
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{fancyhdr}
+\usepackage{here}
+\usepackage{comment}
+\usepackage{mathtools}
+\usepackage{multirow}
+\usepackage{enumerate}
+% 上下に2.5cm、左右に20cmの余白を取る
+\usepackage[top=30mm, bottom=30mm, left=20mm, right=20mm]{geometry}
+
+\newif\iffigure
+%\figurefaulse
+\figuretrue
+%select show the figure or not
+
+\makeatletter
+\def\@cite#1{\textsuperscript{#1)}}
+\def\@biblabel#1{#1)}
+\makeatother
+
+\newcommand{\DATE}[3]{#1年#2月#3日} %month, day, year
+\newcommand{\TheDay}{\DATE{2020}{XX}{XX}}
+\newcommand{\Header}{ヘッダー}
+
+\title{タイトル}
+\date{\TheDay}
+\author{
+B4　西本 慎吾%\thanks{shingo_n@space.t.u-tokyo.ac.jp}
+}
+
+%ヘッダの指定：
+\pagestyle{fancy}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+\lhead[\Header]{\Header} % ヘッダ左側
+%\chead[偶数ページの引数]{奇数ページの引数} %ヘッダ中央
+\rhead[\TheDay]{\TheDay} %ヘッダ右側
+%\lfoot[偶数ページの引数]{奇数ページの引数} %フッタ左側
+%\cfoot[偶数ページの引数]{奇数ページの引数} %フッタ中央
+%\rfoot[偶数ページの引数]{奇数ページの引数} %フッタ右側
+
+%abstは修正
+\begin{abstract}
+  abst\\
+
+   %要修正
+  アブスト
+
+\end{abstract}
+
+\section{はじめに}  
+　%発表時にどのような意見が欲しいのか補足する
+
+\section{研究背景} 
+\subsection{先行研究}
+
+
+\bibliographystyle{junsrt} %何がええかは考える plain, acm, alpha とか
+\bibliography{Ref} 
+\end{document}
