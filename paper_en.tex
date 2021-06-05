@@ -1,4 +1,4 @@
-\documentclass[11pt]{jsarticle}
+\documentclass[11pt]{article}
 
 \usepackage[dvipdfmx]{graphicx}
 \usepackage{fancyhdr}
@@ -20,14 +20,14 @@
 \def\@biblabel#1{#1)}
 \makeatother
 
-\newcommand{\DATE}[3]{#1年#2月#3日} %month, day, year
-\newcommand{\TheDay}{\DATE{202X}{XX}{XX}}
+\newcommand{\DATE}[3]{#1 #2, #3} %month, day, year
+\newcommand{\TheDay}{\DATE{Month}{Day}{Year}}
 \newcommand{\Header}{Header}
 
 \title{Tittle}
 \date{\TheDay}
 \author{
-　山田　太郎
+　Taro Yamada
 }
 
 %ヘッダの指定：
@@ -44,19 +44,19 @@
 %\rfoot[偶数ページの引数]{奇数ページの引数} %フッタ右側
 
 \begin{abstract}
-  アブスト\\
+  abst\\
 
 
 \end{abstract}
 
-\section{初めに}
+\section{Introduction}
 
-\section{背景}
-\subsection{先行研究}
-\section{手法}
-\section{結果}
-\section{考察}
-\section{結論}
+\section{Background}
+\subsection{Previous Research}
+\section{Methodology}
+\section{Result, Simulation}
+\section{Consideration}
+\section{Conclusion}
 
 \bibliographystyle{junsrt} % plain, acm, alpha ...
 \bibliography{Ref} 
